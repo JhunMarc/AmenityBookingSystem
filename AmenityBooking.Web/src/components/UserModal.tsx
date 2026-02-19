@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useUser } from '../context/UserContext';
 
+
 export const UserModal = () => {
     const { userName, setUserName } = useUser();
     const [input, setInput] = useState(''); 
