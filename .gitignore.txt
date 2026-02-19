@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+bin/
+obj/
+
+# Build results
+dist/
+build/
+
+# Environment files
+.env
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
