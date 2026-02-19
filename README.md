@@ -44,6 +44,11 @@ or used in a standalone "Kiosk" environment within the building lobby for guest 
 
 The user's name is stored in the browser session to manage their bookings during that visit, and it is also saved in the database along with their booking details.
 
+<img width="1896" height="1428" alt="sample1" src="https://github.com/user-attachments/assets/68d260b7-b67a-49e0-93a3-fe24d20e8343" />
+<img width="1896" height="1428" alt="welcome-sample" src="https://github.com/user-attachments/assets/e43faaec-8b36-422b-9fa8-e5a2ccbf22f2" />
+
+
+
 
 ✅ Features Implemented
 Visual Slot Selection: Grid view of available/booked slots.
