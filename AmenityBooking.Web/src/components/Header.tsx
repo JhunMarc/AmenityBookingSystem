@@ -4,7 +4,8 @@ import { useUser } from '../context/UserContext';
 export const Header = () => {
     const { userName,logout } = useUser();
     const initials = userName ? userName.substring(0, 2).toUpperCase() : "GU";
-
+ 
+    
     return (
         <header className=" h-20 bg-white px-8 flex items-center justify-between shadow-sm sticky top-0 z-40">
             <div className='w-10/12 mx-auto flex flex-row justify-between'>
