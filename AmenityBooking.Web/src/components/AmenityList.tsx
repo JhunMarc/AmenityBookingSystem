@@ -10,7 +10,7 @@ export const AmenityList = () => {
     const { amenities, selectedAmenity, selectAmenity } = useBooking();
 
     return (
-        <div className="flex flex-wrap gap-4 pb-4 mb-6">
+        <div className="flex flex-wrap gap-3 md:gap-4 pb-4 mb-6">
             {amenities.map(item => {
                 const Icon = iconMap[item.icon] || Film;
                 const isSelected = selectedAmenity?.id === item.id;

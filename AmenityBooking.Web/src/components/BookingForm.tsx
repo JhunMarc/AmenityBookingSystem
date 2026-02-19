@@ -154,7 +154,7 @@ export const BookingForm = () => {
                     </div>
                 </div>
 
-                <div className='w-5/12 p-6'>
+                <div className='w-full md:w-5/12 p-6'>
                     <div className="bg-gray-50 p-6 text-sm text-gray-600 rounded-lg">
                         <h2 className="text-lg mb-4">Terms & Conditions</h2>
                         <ol className="list-decimal list-inside space-y-2">
