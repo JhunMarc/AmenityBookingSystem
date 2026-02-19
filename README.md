@@ -13,11 +13,13 @@ AmenityBooking.API: .NET Backend
 🚀 Setup Instructions
 1. Backend Setup (.NET API)
   1. Open the terminal and navigate to the API folder:
-     - cd AmenityBooking.API
-  2. Configure Database:
+     
+    - cd AmenityBooking.API
+    
+  3. Configure Database:
       Open appsettings.json.
       Update the DefaultConnection string to match your local SQL Server instance.
-  3. Initialize Database & Seeder:
+  4. Initialize Database & Seeder:
       Run the this command to create the migration and update the database.
       Note: Application has a DbInitializer that will automatically seed the Amenities and Slots upon the first run.
      
@@ -25,17 +27,25 @@ AmenityBooking.API: .NET Backend
     - dotnet ef database update
   
   5. Run the API:
+  
     - dotnet run
+  
   The API will start on http://localhost:5153
 
 2. Frontend Setup (React)
   1. Open new terminal and navigate to the Web folder:
+     
     - cd AmenityBooking.Web
-  2. Install dependencies:
+    
+  3. Install dependencies:
+     
     - npm install
-  3. Run the App:
+    
+  4. Run the App:
+     
     - npm run dev
-    Open the link provided (usually http://localhost:5173).
+    
+  6. Open the link provided (usually http://localhost:5173).
 
 ℹ️ Notes on Authentication
 Current Implementation: Guest/Kiosk Mode
