@@ -20,10 +20,11 @@ AmenityBooking.API: .NET Backend
   3. Initialize Database & Seeder:
       Run the this command to create the migration and update the database.
       Note: Application has a DbInitializer that will automatically seed the Amenities and Slots upon the first run.
+     
     - dotnet ef migrations add InitialCreate
     - dotnet ef database update
   
-  4. Run the API:
+  5. Run the API:
     - dotnet run
   The API will start on http://localhost:5153
 
