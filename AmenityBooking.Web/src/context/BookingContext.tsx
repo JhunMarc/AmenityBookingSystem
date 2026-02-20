@@ -8,6 +8,7 @@ interface BookingContextType {
     selectedDate: Date;
     selectedSlotId: number | null;
     isLoading: boolean;
+    isLoadingInitial: boolean;
     
     selectAmenity: (amenity: Amenity) => void;
     selectDate: (date: Date) => void;
@@ -25,6 +26,7 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const [selectedDate, setSelectedDate] = useState<Date>(new Date());
     const [selectedSlotId, setSelectedSlotId] = useState<number | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoadingInitial, setIsLoadingInitial] = useState(true);
 
     const API_URL = "http://localhost:5153/api/booking"; 
 
@@ -34,7 +36,9 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
             .then(data => {
                 setAmenities(data);
                 if (data.length > 0) setSelectedAmenity(data[0]);
-            });
+                setIsLoadingInitial(false);
+            })
+            .catch(() => setIsLoadingInitial(false));
     }, []);
 
     useEffect(() => {
@@ -73,13 +77,11 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
             return true;
         }
         return false;
-
-       
     };
 
     return (
         <BookingContext.Provider value={{
-            amenities, slots, selectedAmenity, selectedDate, selectedSlotId, isLoading,
+            amenities, slots, selectedAmenity, selectedDate, selectedSlotId,isLoadingInitial, isLoading,
             selectAmenity: setSelectedAmenity,
             selectDate: setSelectedDate,
             selectSlot: setSelectedSlotId,

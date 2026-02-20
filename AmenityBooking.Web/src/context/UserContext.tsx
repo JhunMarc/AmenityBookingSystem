@@ -9,15 +9,15 @@ interface UserContextType {
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => { 
-    const [userName, setUserNameState] = useState<string | null>(localStorage.getItem('amenity_user'));
+    const [userName, setUserNameState] = useState<string | null>(sessionStorage.getItem('amenity_user'));
 
     const setUserName = (name: string) => {
-        localStorage.setItem('amenity_user', name);
+        sessionStorage.setItem('amenity_user', name);
         setUserNameState(name);
     };
 
     const logout = () => {
-        localStorage.removeItem('amenity_user');
+        sessionStorage.removeItem('amenity_user');
         setUserNameState(null);
     };
 
